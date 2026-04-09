@@ -6,9 +6,11 @@ const PHONE = "721 055 441";
 const EMAIL_DISPLAY = process.env.GMAIL_USER || "strechymohwald@gmail.com";
 const WEB_URL = "https://martinmohwald.cz";
 
-// Credentials from environment variables
+// Credentials from environment variables (sending account)
 const GMAIL_USER = process.env.GMAIL_USER || "";
 const GMAIL_PASS = process.env.GMAIL_PASS || "";
+// Where to deliver new inquiries
+const OWNER_EMAIL = "strechymohwald@gmail.com";
 
 // Sanitize user input to prevent XSS in email HTML
 function escapeHtml(str: string): string {
@@ -69,7 +71,7 @@ export default async function handler(
   // Email to Owner
   const adminMailOptions = {
     from: GMAIL_USER,
-    to: GMAIL_USER,
+    to: OWNER_EMAIL,
     replyTo: safeEmail,
     subject: `Nová poptávka z webu: ${safeName}`,
     html: `
