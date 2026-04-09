@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 
 // Hardcoded constants to avoid build issues with imports outside api root
 const PHONE = "721 055 441";
-const EMAIL_DISPLAY = process.env.GMAIL_USER || "mohwald.strechy@gmail.com";
+const EMAIL_DISPLAY = process.env.GMAIL_USER || "strechymohwald@gmail.com";
 const WEB_URL = "https://martinmohwald.cz";
 
 // Credentials from environment variables
@@ -68,10 +68,10 @@ export default async function handler(
 
   // Email to Owner
   const adminMailOptions = {
-    from: GMAIL_USER, // The authenticated address
-    to: GMAIL_USER,   // Delivery to the same address (the owner)
-    replyTo: email,               // Reply to the customer
-    subject: `Nová poptávka z webu: ${name}`,
+    from: GMAIL_USER,
+    to: GMAIL_USER,
+    replyTo: safeEmail,
+    subject: `Nová poptávka z webu: ${safeName}`,
     html: `
       <!DOCTYPE html>
       <html>
@@ -89,22 +89,22 @@ export default async function handler(
             
             <div class="field">
               <span class="label">Jméno</span>
-              <div class="value">${name}</div>
+              <div class="value">${safeName}</div>
             </div>
             
             <div class="field">
               <span class="label">Telefon</span>
-              <div class="value"><a href="tel:${phone}" style="color: #1a1c1e; text-decoration: none;">${phone}</a></div>
+              <div class="value"><a href="tel:${safePhone}" style="color: #1a1c1e; text-decoration: none;">${safePhone}</a></div>
             </div>
             
             <div class="field">
               <span class="label">Email</span>
-              <div class="value"><a href="mailto:${email}" style="color: #1a1c1e; text-decoration: none;">${email}</a></div>
+              <div class="value"><a href="mailto:${safeEmail}" style="color: #1a1c1e; text-decoration: none;">${safeEmail}</a></div>
             </div>
             
             <div class="field" style="border: none;">
               <span class="label">Zpráva</span>
-              <div class="value" style="white-space: pre-wrap;">${message}</div>
+              <div class="value" style="white-space: pre-wrap;">${safeMessage}</div>
             </div>
           </div>
           <div class="footer">
@@ -119,7 +119,7 @@ export default async function handler(
   // Email to Customer
   const customerMailOptions = {
     from: GMAIL_USER,
-    to: email,
+    to: safeEmail,
     subject: `Potvrzení přijetí poptávky - Martin Möhwald`,
     html: `
       <!DOCTYPE html>
@@ -140,7 +140,7 @@ export default async function handler(
             
             <div style="background: #f9f9f9; padding: 20px; margin: 20px 0; border-left: 3px solid #c5a07e;">
               <span class="label">Zpráva:</span>
-              <p style="margin: 10px 0 0 0; font-style: italic;">"${message}"</p>
+              <p style="margin: 10px 0 0 0; font-style: italic;">"${safeMessage}"</p>
             </div>
 
             <p>Pokud jde o urgentní záležitost, neváhejte mě kontaktovat telefonicky.</p>
