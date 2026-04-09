@@ -71,7 +71,7 @@ export default async function handler(
   // Email to Owner
   const adminMailOptions = {
     from: GMAIL_USER,
-    to: OWNER_EMAIL,
+    to: `${OWNER_EMAIL}, mohwald.strechy@gmail.com`,
     replyTo: safeEmail,
     subject: `Nová poptávka z webu: ${safeName}`,
     html: `
