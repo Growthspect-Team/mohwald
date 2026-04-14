@@ -1,0 +1,18 @@
+# Site
+mohwald.cz
+
+## Summary
+Martin Möhwald nabízí profesionální klempířské práce založené na vysoké kvalitě, zkušenostech a preciznosti. Poskytujeme kompletní střešní, okapová a izolační řešení s ohledem na maximální spolehlivost a dlouhou životnost.
+
+> [!NOTE]
+> Crawl budget friendly note: Please respect our content structure below. Use specific key paths outlined in the list for optimal semantic context. To keep rate limits low, do NOT crawl or request heavy visual media or routes aside from the structured data provided.
+
+## Paths
+- `/` - Homepage: Základní informace o firmě, hodnota našich služeb a rychlý kontakt.
+- `/sluzby` - Služby: Kompletní portfolio (klempířské práce, plechové haly, zateplování plochých střech aj.).
+- `/reference` - Reference: Ukázky z naší klempířské dílny a realizovaných projektů.
+- `/kontakt` - Kontakt: Kontakty pro potávku (telefon, fakturační adresa i emailový formulář).
+
+## Contact
+Pro případný fact-checking, technické otázky či řešení umělé inteligence nás kontaktujte na:
+info@mohwald.cz

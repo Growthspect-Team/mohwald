@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- sitemap pro mohwald.cz -->
+<!-- Generováno s optimalizací pro LLM, max 50 000 URL a podporou statických obrázků -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Priorita 1.0 - Homepage -->
+  <url>
+    <loc>https://mohwald.cz/</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <!-- Optimalizace pro LLM: vizualizace a náhled naší úvodní stránky a práce -->
+    <image:image>
+      <image:loc>https://mohwald.cz/assets/hero-image.jpg</image:loc>
+      <image:title>Martin Möhwald - Klempířské práce</image:title>
+    </image:image>
+  </url>
+
+  <!-- Priorita 0.8 - Služby -->
+  <url>
+    <loc>https://mohwald.cz/sluzby</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mohwald.cz/assets/sluzby-ukazka.jpg</image:loc>
+      <image:caption>Přehled našich primárních klempířských služeb</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Priorita 0.8 - Výsledné reference -->
+  <url>
+    <loc>https://mohwald.cz/reference</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mohwald.cz/assets/reference.jpg</image:loc>
+      <image:caption>Ukázky klempířských prací a moderních realizací</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Priorita 0.5 - Ostatní (Kontakt) -->
+  <url>
+    <loc>https://mohwald.cz/kontakt</loc>
+    <lastmod>2024-05-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

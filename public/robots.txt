@@ -1,0 +1,41 @@
+# mohwald.cz robots.txt
+
+# 1. Specifikace pro AI boty a LLM agenty (plný přístup k HTML contentu)
+User-agent: OpenAI-GPT
+Allow: /
+Crawl-delay: 2
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Anthropic-ai
+Allow: /
+Crawl-delay: 2
+
+# 2. Specifikace pro standardní vyhledávače (Slower delay, aby nespamoval server)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 5
+
+# 3. Globální pravidla pro zbytek nedefinovaných botů s ohledem na bezpečnost
+User-agent: *
+Crawl-delay: 10
+# Zákaz přístupu do dynamických, neveřejných a profilových sekcí
+Disallow: /api/
+Disallow: /admin/
+Disallow: /internal/
+Disallow: /auth/
+Disallow: /checkout/
+Disallow: /user/
+
+# KRITICKÉ: Zákaz indexace všech query parametrů 
+# Prevence "infinite crawlu", duplicit a plýtvání crawl budgetem
+Disallow: /*?*
+Disallow: /*&*
+
+# Zákaz indexace Cloudflare interních cest (pokud využíváte CF)
+Disallow: /cdn-cgi/
+
+# Odkaz na Sitemap
+Sitemap: /sitemap.xml
