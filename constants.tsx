@@ -15,32 +15,32 @@ export const SITUATIONS: SituationItem[] = [
 ];
 
 export const SERVICES: ServiceItem[] = [
-  { 
-    title: "Klempířské práce na střechách", 
+  {
+    title: "Klempířské práce na střechách",
     description: "Postavíme vám střechu, která vydrží. Komplexní pokrytí plechem od nejmenších pergol až po velké domy. Titanzinek, hliník, měď – vždy správný materiál pro vaši situaci. Spád, odvodnění, detail – všechno jsme řešili tisíckrát. Vaše střecha nebude výjimka.",
     image: img7828,
     mediaType: 'image'
   },
-  { 
-    title: "Montáž a opravy žlabů a svodů", 
+  {
+    title: "Montáž a opravy žlabů a svodů",
     description: "Zatékající žlab? To dělá problémy. Instalujeme, opravujeme a údržbujeme žlaby všech typů. Správný spád, tesné spojení, kvalitní materiál. Vaše voda bude téct tam, kam má – a ne přes zeď.",
     image: img8320,
     mediaType: 'image'
   },
-  { 
-    title: "Oplechování komínů a atik", 
+  {
+    title: "Oplechování komínů a atik",
     description: "Precizní oplechování prostupů a ukončení střech je klíčové pro její životnost. Zajišťujeme vodotěsnost kolem komínových těles, atik, střešních oken a dalších prvků.",
     image: img8796,
     mediaType: 'image'
   },
-  { 
-    title: "Rekonstrukce a výměny prvků", 
+  {
+    title: "Rekonstrukce a výměny prvků",
     description: "Staré prvky musí pryč, nové mohou přijít. Demontujeme opotřebované díly a instalujeme moderní systémy, které vám vydrží. Dlouhodobě levnější než neustálé opravy.",
     image: img7828,
     mediaType: 'image'
   },
-  { 
-    title: "Havárie a akutní zásahy", 
+  {
+    title: "Havárie a akutní zásahy",
     description: "Při poškození střechy větrem nebo krupobitím reagujeme rychle. Provádíme provizorní zajištění proti zatékání i následnou definitivní opravu.",
     image: img8320,
     mediaType: 'image'
@@ -59,7 +59,7 @@ export const PORTFOLIO: PortfolioItem[] = [
     id: 2,
     image: img8320,
     mediaType: 'image',
-    task: "Oplechování v historické (památkové) zástavbě",
+    task: "Oplechování střechy v chatové oblasti",
     solution: "Tady se nesmí hrát si. Tradici vyhovující materiály, detaily respektující stáří domu. Nový ples bez toho, aby to vypadalo jako Disney kostým."
   },
   {
